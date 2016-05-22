@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "xna_demo", "xna_demo\xna_demo\xna_demo.csproj", "{DB1B5E93-D47E-485A-ADAF-E5C9BE28969A}"
+EndProject
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "xna_demoContent", "xna_demo\xna_demoContent\xna_demoContent.contentproj", "{2932509A-22EB-4100-8EDF-3877E6817CD2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x86 = Debug|x86
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB1B5E93-D47E-485A-ADAF-E5C9BE28969A}.Debug|x86.ActiveCfg = Debug|x86
+		{DB1B5E93-D47E-485A-ADAF-E5C9BE28969A}.Debug|x86.Build.0 = Debug|x86
+		{DB1B5E93-D47E-485A-ADAF-E5C9BE28969A}.Release|x86.ActiveCfg = Release|x86
+		{DB1B5E93-D47E-485A-ADAF-E5C9BE28969A}.Release|x86.Build.0 = Release|x86
+		{2932509A-22EB-4100-8EDF-3877E6817CD2}.Debug|x86.ActiveCfg = Debug|x86
+		{2932509A-22EB-4100-8EDF-3877E6817CD2}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
