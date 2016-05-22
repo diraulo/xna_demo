@@ -14,12 +14,16 @@ namespace xna_demo
     /// <summary>
     /// This is the main type for your game
     /// </summary>
-    public class Game1 : Microsoft.Xna.Framework.Game
+    public class GameEngine : Microsoft.Xna.Framework.Game
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        public Game1()
+        GUI.Menus.MainMenu mainMenu;
+
+        public static Vector2 clientBoundaries = new Vector2(1024, 768);
+
+        public GameEngine()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
@@ -35,7 +39,9 @@ namespace xna_demo
         {
             // TODO: Add your initialization logic here
             this.IsMouseVisible = true;
-
+            graphics.PreferredBackBufferWidth = 1024;
+            graphics.PreferredBackBufferHeight = 768;
+            graphics.ApplyChanges();
             base.Initialize();
         }
 
@@ -48,7 +54,7 @@ namespace xna_demo
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            // TODO: use this.Content to load your game content here
+            mainMenu = new GUI.Menus.MainMenu(Content);
         }
 
         /// <summary>
@@ -71,7 +77,7 @@ namespace xna_demo
             if (Keyboard.GetState().IsKeyDown(Keys.Escape))
                 this.Exit();
 
-            // TODO: Add your update logic here
+            mainMenu.Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -84,9 +90,11 @@ namespace xna_demo
         {
             GraphicsDevice.Clear(Color.Black);
 
-            // TODO: Add your drawing code here
+            spriteBatch.Begin();
+            mainMenu.Draw(spriteBatch);
 
             base.Draw(gameTime);
+            spriteBatch.End();
         }
     }
 }
